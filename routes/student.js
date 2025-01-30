@@ -10,7 +10,7 @@ const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, path.join(__dirname, "../uploads")); // Define your file upload directory
   },
-  filename: (req, file, cb) => {
+  filename: (req, file, cb) => {  
     cb(null, Date.now() + path.extname(file.originalname)); // Generate a unique filename
   },
 });
